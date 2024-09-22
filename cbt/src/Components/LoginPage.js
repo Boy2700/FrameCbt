@@ -18,10 +18,10 @@ const LoginPage = () => {
         xs={false} 
         sm={4} 
         sx={{ 
-          backgroundImage: 'url(/ff.jpg)', // Use relative URL from public folder
+          backgroundImage: 'url(./logo.png)', // Ensure this is correct
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
-          height: 800, 
+          height: '100vh', // Changed to fit full height
           mx: 'auto' 
         }} 
       />
