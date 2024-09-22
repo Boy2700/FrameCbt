@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Box, Typography, Grid, Stack, IconButton, InputAdornment } from '@mui/material';
+import { TextField, Button, Box, Typography, Stack, IconButton, InputAdornment, Card, CardContent } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
@@ -11,38 +11,24 @@ const LoginPage = () => {
   };
 
   return (
-    <Grid container sx={{ height: '100vh', mt: 10 }}>
+    <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       {/* Image Section */}
-      <Grid 
-        item 
-        xs={false} 
-        sm={4} 
-        sx={{ 
-          backgroundImage: 'url(./logo.png)', // Ensure this is correct
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center', 
-          height: '100vh', // Changed to fit full height
-          mx: 'auto' 
-        }} 
+      <Box
+        component="img"
+        src="https://www.ngscholars.net/wp-content/uploads/2015/07/fountain-university1-205x300.jpg"
+        alt="Logo"
+        sx={{
+          display: { xs: 'none', sm: 'block' }, // Hide on small screens
+          width: { xs: '50%', sm: '20%', }, // Increased sizes for better visibility
+          height: 'auto', // Maintain aspect ratio
+          maxHeight: '800px', // Increased max height
+          objectFit: 'cover',
+        }}
       />
-      
-      {/* Login Form Section */}
-      <Grid 
-        item 
-        xs={12} 
-        sm={6} 
-        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <Box 
-          sx={{ 
-            width: '100%', 
-            maxWidth: 400, 
-            p: 3, 
-            border: '1px solid #ccc', 
-            borderRadius: 2, 
-            backgroundColor: 'white' 
-          }}
-        >
+
+      {/* Login Card Section */}
+      <Card sx={{ maxWidth: 400, zIndex: 2 }}>
+        <CardContent>
           <Typography variant="h4" align="center">Login</Typography>
           <Stack spacing={2} sx={{ mt: 2 }}>
             <TextField label="Username" variant="outlined" fullWidth />
@@ -72,9 +58,9 @@ const LoginPage = () => {
               Login
             </Button>
           </Stack>
-        </Box>
-      </Grid>
-    </Grid>
+        </CardContent>
+      </Card>
+    </Box>
   );
 };
 

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
 
 const NotificationPage = () => {
   const notifications = [
     { message: "New exam available on 2024-09-30." },
     { message: "Reminder: Submit your exam results by 2024-10-05." },
     { message: "Upcoming maintenance on 2024-10-01." },
-    // Add more notifications as needed
   ];
 
   return (
@@ -20,7 +19,19 @@ const NotificationPage = () => {
         padding: 2 
       }}
     >
-      <Typography variant="h5" gutterBottom>
+      {/* Logo Section */}
+      <CardMedia
+        component="img"
+        src="https://www.ngscholars.net/wp-content/uploads/2015/07/fountain-university1-205x300.jpg" // Replace with your logo URL
+        alt="Logo"
+        sx={{
+          width: 100, // Adjust the width of the logo
+          height: 'auto', // Maintain aspect ratio
+          mb: 2, // Margin below the logo
+        }}
+      />
+
+      <Typography variant="h5" gutterBottom sx={{ mt: 2 }}>
         Notifications
       </Typography>
       <Box sx={{ width: '100%', maxWidth: 600 }}>

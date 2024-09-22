@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Card, CardContent } from '@mui/material';
+import { Box, Typography, Button, Card, CardContent, CardMedia } from '@mui/material';
 
 const ExamResultPage = () => {
   return (
@@ -21,6 +21,19 @@ const ExamResultPage = () => {
         }}
       >
         <CardContent sx={{ textAlign: 'center' }}>
+          {/* Logo Section */}
+          <CardMedia
+            component="img"
+            src="https://www.ngscholars.net/wp-content/uploads/2015/07/fountain-university1-205x300.jpg" // Replace with your logo URL
+            alt="Logo"
+            sx={{
+              width: 100, // Adjust the width of the logo
+              height: 'auto', // Maintain aspect ratio
+              mb: 2, // Margin below the logo
+              mx: 'auto' // Center the logo
+            }}
+          />
+          
           <Typography variant="h5" gutterBottom>
             Exam Results
           </Typography>

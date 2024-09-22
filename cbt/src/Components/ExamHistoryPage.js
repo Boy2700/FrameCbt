@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
 
 const ExamHistoryPage = () => {
   const examHistory = [
@@ -19,6 +19,18 @@ const ExamHistoryPage = () => {
         padding: 2 
       }}
     >
+      {/* Logo Section */}
+      <CardMedia
+        component="img"
+        src="https://www.ngscholars.net/wp-content/uploads/2015/07/fountain-university1-205x300.jpg" // Replace with your logo URL
+        alt="Logo"
+        sx={{
+          width: 100, // Adjust the width of the logo
+          height: 'auto', // Maintain aspect ratio
+          mb: 2, // Margin below the logo
+        }}
+      />
+
       <Typography variant="h5" gutterBottom>
         Exam History
       </Typography>
