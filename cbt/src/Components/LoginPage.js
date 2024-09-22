@@ -18,7 +18,7 @@ const LoginPage = () => {
         xs={false} 
         sm={4} 
         sx={{ 
-          backgroundImage: 'url(/ff.webp)', // Use relative URL from public folder
+          backgroundImage: 'url(/ff.jpg)', // Use relative URL from public folder
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
           height: 800, 
